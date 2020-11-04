@@ -14,7 +14,7 @@ class Form extends Component{
     }
     onSubmit = e => {
         e.preventDefault()
-        this.props.fetchLyrics()
+        this.props.fetchLyrics(this.state.artist, this.state.song)
     }
     render(){
         return(
@@ -34,7 +34,8 @@ class Form extends Component{
 
 const mapStateToProps = (state) => {
     return{
-        lyrics: state
+        lyrics: state.lyrics,
+        error: state.error
     }
 }
 

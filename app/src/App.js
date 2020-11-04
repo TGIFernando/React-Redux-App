@@ -1,11 +1,13 @@
 import './App.css';
 import Form from './Components/Form'
+import Lyrics from './Components/Lyrics'
 
 function App() {
   return (
     <div className="App">
       <h1>MAIN APP</h1>
       <Form/>
+      <Lyrics/>
     </div>
   );
 }
