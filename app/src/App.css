@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+div .loadingTrue{
+  visibility: hidden;
+}
+
+div .load{
+  visibility: hidden;
+}
+
+div .loadingTrue1{
+  visibility: visible;
+}

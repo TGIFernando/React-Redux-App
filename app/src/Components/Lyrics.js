@@ -4,9 +4,14 @@ import { connect } from 'react-redux'
 function Lyrics(props){
     return(
         <div>
-            <h1>Lyrics</h1>
-            <div>{props.lyrics}</div>
-            <div>{props.error}</div>
+            <div className={`loading${props.isLoading ? 'True' : 'False'}`}>
+                <h2>Lyrics</h2>
+                <div>{props.lyrics}</div>
+                <div>{props.error}</div>
+            </div>
+            <div className={`load loading${props.isLoading ? 'True1' : 'True'}`}>
+                <h1>LOADING...</h1>
+            </div>
         </div>
     )
 }
