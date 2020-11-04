@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchLyrics } from '../Actions'
+import * as sty from '../StyledComponents/formStyles'
 
 class Form extends Component{
     state = {
@@ -10,7 +11,6 @@ class Form extends Component{
     onChange = e => {
         const name = e.target.name
         this.setState({...this.state, [name]: e.target.value})
-        console.log(this.state)
     }
     onSubmit = e => {
         e.preventDefault()
@@ -18,16 +18,15 @@ class Form extends Component{
     }
     render(){
         return(
-            <div>
-                <h1>FORM</h1>
-                <form onSubmit={this.onSubmit}>
-                    <label>Artist</label>
-                    <input onChange={this.onChange} value={this.state.artist} type='text' name='artist'/>
-                    <label>Song</label>
-                    <input onChange={this.onChange} value={this.state.song} type='text' name='song'/>
-                    <button>SEARCH FOR LYRICS</button>
-                </form>
-            </div>
+            <sty.FlexyDiv>
+                <sty.FlexyForm onSubmit={this.onSubmit}>
+                    <sty.Label>Artist</sty.Label>
+                    <sty.Input placeholder='Artist Name' onChange={this.onChange} value={this.state.artist} type='text' name='artist'/>
+                    <sty.Label>Song</sty.Label>
+                    <sty.Input placeholder='Song Name' onChange={this.onChange} value={this.state.song} type='text' name='song'/>
+                    <sty.Button>SEARCH FOR LYRICS</sty.Button>
+                </sty.FlexyForm>
+            </sty.FlexyDiv>
         )
     }
 }

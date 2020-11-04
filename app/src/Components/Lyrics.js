@@ -1,18 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
+import * as sty from '../StyledComponents/lyrics.Styles'
 function Lyrics(props){
     return(
-        <div>
+        <sty.MainDiv>
             <div className={`loading${props.isLoading ? 'True' : 'False'}`}>
-                <h2>Lyrics</h2>
-                <div>{props.lyrics}</div>
-                <div>{props.error}</div>
+                <sty.Lyric>Lyrics</sty.Lyric>
+                <sty.Lyrics>{props.lyrics}</sty.Lyrics>
+                <sty.Error>{props.error}</sty.Error>
             </div>
-            <div className={`load loading${props.isLoading ? 'True1' : 'True'}`}>
-                <h1>LOADING...</h1>
-            </div>
-        </div>
+            <sty.LoadDiv className={`load loading${props.isLoading ? 'True1' : 'True'}`}>
+                <sty.Loading>LOADING...</sty.Loading>
+            </sty.LoadDiv>
+        </sty.MainDiv>
     )
 }
 
