@@ -12,6 +12,13 @@ background-color: #C880B7;
 box-shadow: 5px 5px 10px #B6549F;
 `
 
+export const FlexyDiv = styled.div`
+display:flex;
+align-items: center;
+justify-content:center;
+flex-direction:column;
+`
+
 export const Lyric = styled.h2`
 font-family: 'Playfair Display', serif;
 font-size: 3rem;
@@ -19,7 +26,8 @@ font-size: 3rem;
 
 export const Lyrics = styled.p`
 font-family: 'Assistant', sans-serif;
-font-size: 1.6rem;
+font-size: 2rem;
+width:80%;
 `
 
 export const Loading = styled.h3`
@@ -35,4 +43,5 @@ padding: 1rem;
 export const Error = styled.p`
 font-size: 5rem;
 padding: 1rem;
+background: rgba(151, 43, 44, 0.8);
 `

@@ -37,11 +37,11 @@ div .loadingTrue{
 }
 
 div .load{
-  visibility: hidden;
+  display: none;
 }
 
 div .loadingTrue1{
-  visibility: visible;
+  display: initial;
 }
 /*LOADING VISIBILATY*/
 
@@ -56,5 +56,12 @@ h1{
   border: 1rem solid #4A2040;
   color: #F5CCE8;
   font-family: 'Assistant', sans-serif;
+}
+
+.Visible {
+  display: initial;
+}
+.NotVisible{
+  display: none;
 }
 /*Main Body*/
